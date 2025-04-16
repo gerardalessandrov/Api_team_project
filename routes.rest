@@ -1,0 +1,32 @@
+GET http://localhost:3002/contacts
+
+POST http://localhost:3002/contacts HTTP/1.1
+{
+    "fullName": "Laura Gomez",
+    "email": "laura@example.com",
+    "address": "123 Main Street, XYZ City",
+    "phone": "+52 123 456 7890",
+    "registrationDate": "2024-05-01T10:00:00Z",
+    "isActive": true
+}
+
+PUT  http://localhost:3002/contacts/67fd508e6afe18c271666df7  HTTP/1.1
+
+{
+   "fullName": "Laura Gomez",
+    "email": "laura@example.com",
+    "address": "123 Main Street, XYZ City",
+    "phone": "+52 123 456 7890",
+    "registrationDate": "2024-05-01T10:00:00Z",
+    "isActive": true
+ }
+
+DELETE http://localhost:3002/contacts/67fd508e6afe18c271666df7  HTTP/1.1
+ {
+   "fullName": "Laura Gomez",
+    "email": "laura@example.com",
+    "address": "123 Main Street, XYZ City",
+    "phone": "+52 123 456 7890",
+    "registrationDate": "2024-05-01T10:00:00Z",
+    "isActive": true
+ }
