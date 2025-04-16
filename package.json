@@ -1,0 +1,38 @@
+{
+  "name": "api_team_project",
+  "version": "1.0.0",
+  "description": "api-document",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm",
+    "start": "nodemon server.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gerardalessandrov/Api_team_project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gerardalessandrov/Api_team_project/issues"
+  },
+  "homepage": "https://github.com/gerardalessandrov/Api_team_project#readme",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express-session": "^1.18.1",
+    "express-validator": "^7.2.1",
+    "mongodb": "^6.15.0",
+    "passport": "^0.7.0",
+    "passport-github2": "^0.1.12",
+    "swagger-autogen": "^2.23.7",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "express": "^5.1.0",
+    "nodemon": "^3.1.9"
+  }
+}
