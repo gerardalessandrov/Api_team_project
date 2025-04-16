@@ -5,9 +5,9 @@
     "description": "Users Api",
     "version": "1.0.0"
   },
-  "host": "localhost:3002",
+  "host": "https://api-team-project.onrender.com",
   "basePath": "/",
-  "schemes": ["http", "https"],
+  "schemes": ["https"],
   "paths": {
     "/": {
       "get": {
