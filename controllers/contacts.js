@@ -31,7 +31,7 @@ const getSingle = async (req, res) => {
       .find({ _id: userId });
 
     result.toArray().then((clients) => {
-      if (contacts.length === 0) {
+      if (clients.length === 0) {
         return res.status(404).json({ message: "User not found" });
       }
       res.setHeader("Content-Type", "application/json");
