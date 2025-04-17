@@ -10,7 +10,7 @@ router.get("/:id", usersController.getSingle);
 // POST route to create a new user with validations
 router.post(
   "/",
- isAuthenticated,
+  isAuthenticated,
   [
     body("fullName").isLength({ min: 1 }).withMessage("Full name is required."),
 
@@ -43,7 +43,7 @@ router.post(
 // PUT route to update an existing user with validations
 router.put(
   "/:id",
- isAuthenticated,
+  isAuthenticated,
   [
     body("fullName").isLength({ min: 1 }).withMessage("Full name is required."),
 
@@ -73,5 +73,5 @@ router.put(
   usersController.updateUser
 );
 
-router.delete("/:id",isAuthenticated, usersController.deleteUser);
+router.delete("/:id", isAuthenticated, usersController.deleteUser);
 module.exports = router;
