@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const usersController = require("../controllers/products");
 const { body, validationResult } = require("express-validator");
+const { isAuthenticated } = require("../middleware/authenthicate");
 // const { isAuthenticated } = require("../middleware/authenthicate");
 router.get("/", usersController.getAll);
 
@@ -9,7 +10,7 @@ router.get("/:id", usersController.getSingle);
 
 router.post(
   "/",
-//   isAuthenticated,
+isAuthenticated,
   [
     body("name").isLength({ min: 1 }).withMessage("Product name is required."),
 
@@ -48,7 +49,7 @@ router.post(
 // PUT route to update an existing user with validations
 router.put(
   "/:id",
-//   isAuthenticated,
+isAuthenticated,
   [
     body("name").isLength({ min: 1 }).withMessage("Product name is required."),
 
@@ -84,5 +85,5 @@ router.put(
   usersController.updateUser
 );
 
-router.delete("/:id", usersController.deleteUser);
+router.delete("/:id",isAuthenticated, usersController.deleteUser);
 module.exports = router;
